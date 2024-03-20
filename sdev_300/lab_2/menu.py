@@ -64,7 +64,7 @@ cylinder.
 import secrets
 import string
 from datetime import date
-from math import cos, pi, sqrt
+from math import cos, pi, sqrt, radians
 from typing import Union
 
 
@@ -186,7 +186,8 @@ def calculate_percentage(numerator: int, denominator: int, decimal_points: int) 
     Returns the percentage rounded to the given decimal place
     """
     percent = (numerator / denominator) * 100  # calculate percent
-    return round(percent, decimal_points)  # round and return
+    format_string = "{:." + str(decimal_points) + "f}%"
+    return format_string.format(percent)  # round and return
 
 
 def days_until_july_4_2025() -> int:
@@ -207,7 +208,7 @@ def law_of_cosines(a: float, b: float, angle_c: float) -> float:
     a2 = pow(a, 2)
     b2 = pow(b, 2)
     ab = a * b
-    cos_c = cos(angle_c)
+    cos_c = cos(radians(angle_c))
 
     # plug everything into equation
     c2 = a2 + b2 - (2 * ab * cos_c)
@@ -274,7 +275,7 @@ def get_input_parameters(option: str) -> list[Union[str, int, float]]:
         # for calculating the leg of a triangle using Law of Cosines
         side_a = get_input("Enter side_a: ", validate=validate_float)
         side_b = get_input("Enter side_b: ", validate=validate_float)
-        angle = get_input("Enter the angle between the sides: ", validate=validate_float)
+        angle = get_input("Enter the angle between the sides in degrees: ", validate=validate_float)
         parameters.extend([side_a, side_b, angle])
 
     elif option == "e":
