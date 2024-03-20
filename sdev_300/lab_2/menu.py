@@ -180,7 +180,9 @@ def generate_secure_password(
     return password
 
 
-def calculate_percentage(numerator: int, denominator: int, decimal_points: int) -> float:
+def calculate_percentage(
+    numerator: int, denominator: int, decimal_points: int
+) -> float:
     """
     Calculates a percentage given a numerator and denominator.
     Returns the percentage rounded to the given decimal place
@@ -247,13 +249,21 @@ def get_input_parameters(option: str) -> list[Union[str, int, float]]:
         # for generating secure password
         length = get_input("How long should it be? ", validate=validate_int)
 
-        letters = get_input("Should it include letters? (yes/no): ", validate=validate_yn)
+        letters = get_input(
+            "Should it include letters? (yes/no): ", validate=validate_yn
+        )
         if letters:
-            upper_case = get_input("Should it include uppercase? (yes/no): ", validate=validate_yn)
+            upper_case = get_input(
+                "Should it include uppercase? (yes/no): ", validate=validate_yn
+            )
         else:
             upper_case = False
-        punctuation = get_input("Should it include punctuation? (yes/no): ", validate=validate_yn)
-        numbers = get_input("Should it include numbers? (yes/no): ", validate=validate_yn)
+        punctuation = get_input(
+            "Should it include punctuation? (yes/no): ", validate=validate_yn
+        )
+        numbers = get_input(
+            "Should it include numbers? (yes/no): ", validate=validate_yn
+        )
 
         # validate at least one charset chosen
         if not letters and not punctuation and not numbers:
@@ -275,7 +285,9 @@ def get_input_parameters(option: str) -> list[Union[str, int, float]]:
         # for calculating the leg of a triangle using Law of Cosines
         side_a = get_input("Enter side_a: ", validate=validate_float)
         side_b = get_input("Enter side_b: ", validate=validate_float)
-        angle = get_input("Enter the angle between the sides in degrees: ", validate=validate_float)
+        angle = get_input(
+            "Enter the angle between the sides in degrees: ", validate=validate_float
+        )
         parameters.extend([side_a, side_b, angle])
 
     elif option == "e":
