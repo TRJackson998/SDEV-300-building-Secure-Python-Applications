@@ -312,7 +312,7 @@ def main() -> None:
             params = get_input_parameters(user_choice)
             # call the selected function with the input parameters
             result = selected_function(*params)
-            print(result)
+            print(f"Your result is: {result}")
         else:
             print("Invalid choice. Please enter a valid option.")
 
