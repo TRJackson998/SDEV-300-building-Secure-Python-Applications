@@ -1,13 +1,12 @@
 [tool.poetry]
 name = "sdev-300"
 version = "0.1.0"
-description = ""
-authors = ["TRJackson998 <t.r.jackson998@gmail.com>"]
+description = "A class taken in 2024 at UMGC."
+authors = ["TRJackson998 <85368064+TRJackson998@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "sdev_300"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 pylint = "^3.1.0"
 
 
