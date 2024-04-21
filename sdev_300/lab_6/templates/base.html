@@ -1,0 +1,41 @@
+<!-- base.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terrence Jackson's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Terrence Jackson</h1>
+      <!-- Navigation bar -->
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('resume') }}">Resume</a></li>
+          <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      {% block content %}
+      <!-- Content of specific page goes here -->
+      {% endblock %}
+    </div>
+
+    <footer>
+      {% block footer %}
+      <p>&copy; 2024 My Portfolio</p>
+      {% endblock %}
+    </footer>
+  </body>
+</html>
