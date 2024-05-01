@@ -1,0 +1,7 @@
+<!-- login.html -->
+{% extends "auth/auth_form.html" %} {% block form_title %} Log In {% endblock %}
+{% block form_action %}{{ url_for('auth.login') }}{% endblock %} {% block
+submit_text %}Login{% endblock %}
+<p>
+  Don't have an account? <a href="{{ url_for('auth.register') }}">Register</a>
+</p>

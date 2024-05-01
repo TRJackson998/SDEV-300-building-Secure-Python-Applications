@@ -1,0 +1,115 @@
+<!-- about.html -->
+{% extends "base.html" %} {% block content %}
+<h2>About Me</h2>
+<h4>Professional Background</h4>
+<p>
+  I currently serve as a Programming Analyst at MyCompany, where I specialize in
+  developing and enhancing scripts to streamline automation processes and
+  improve efficiency. My responsibilities include conducting data analysis and
+  reporting using Python and SQL, prioritizing and managing tasks via ticket
+  boards, and collaborating with diverse teams to resolve issues and enhance
+  processes. I am dedicated to identifying opportunities for process improvement
+  and automation, ultimately streamlining workflows and enhancing productivity.
+</p>
+<h4>Educational Journey</h4>
+<p>
+  Throughout my schooling, I have maintained an outstanding cumulative GPA of
+  3.96.
+</p>
+
+<ol>
+  <li>
+    <em>MyCommunityCollege:</em>
+    <ul>
+      <li>Earned an AS in Computer Programming C++</li>
+      <li>Earned an AS in Computer Science</li>
+    </ul>
+  </li>
+  <li>
+    <em>University of Maryland Global Campus:</em>
+    <ul>
+      <li>
+        Currently pursuing a
+        <a
+          href="https://www.umgc.edu/online-degrees/bachelors/computer-science"
+          target="_blank"
+          >BS in Computer Science</a
+        >
+      </li>
+      <li>Expected graduation: March 2025</li>
+    </ul>
+  </li>
+</ol>
+<h4>Skills</h4>
+<p>
+  My expertise includes proficiency in Python, C/C++, Java, SQL Server Manager,
+  T-SQL, Git, Atlassian tools (Jira, Bitbucket), and more. I excel in
+  application development, data analysis and reporting, collaboration,
+  problem-solving, and time management.
+</p>
+<h4>Personal Philosophy</h4>
+<p>
+  At the core of my professional philosophy is a commitment to excellence and
+  continuous improvement. I believe in the power of technology to transform
+  lives and businesses, and I am dedicated to harnessing that power to create
+  meaningful solutions that make a positive impact.
+</p>
+<h4>Hobbies</h4>
+<p>
+  Outside of my professional endeavors, I enjoy engaging in a variety of hobbies
+  that nourish both my mind and spirit. These activities provide me with
+  opportunities to unwind, explore new interests, and maintain a balanced
+  lifestyle. Some of my favorite hobbies include:
+</p>
+<ul>
+  <li>
+    <p><em>Reading</em>:</p>
+    <p>
+      <img
+        src="{{ url_for('static', filename='reading.jpg') }}"
+        alt="A man wearing glasses and reading a red book"
+      />
+    </p>
+    <p>
+      I have a passion for literature and enjoy immersing myself in
+      thought-provoking books across various genres. From classic literature to
+      sci-fi, I find solace in the pages of a good book. I am currently reading
+      the Ender's Game series.
+    </p>
+  </li>
+  <li>
+    <p><em>Crochet</em>:</p>
+    <p>
+      <img
+        src="{{ url_for('static', filename='crochet.jpg') }}"
+        alt="Two hands holding a crochet hook and a red yarn project"
+      />
+    </p>
+    <p>
+      Crocheting allows me to unleash my creativity and create beautiful,
+      handmade items. Whether it's a cozy blanket, a colorful scarf, or
+      intricate
+      <a href="https://en.wikipedia.org/wiki/Amigurumi" target="_blank"
+        >Amigurumi</a
+      >
+      toys, I find joy in working with yarn and bringing my ideas to life
+      through crochet stitches.
+    </p>
+  </li>
+  <li>
+    <p><em>Baking</em>:</p>
+    <p>
+      <img
+        src="{{ url_for('static', filename='baking.jpg') }}"
+        alt="Several baking tools including eggs, measuring cups, and a whisk"
+      />
+    </p>
+    <p>
+      There's something truly satisfying about the process of baking, from
+      mixing ingredients to watching dough rise in the oven. I enjoy whipping up
+      batches of cookies, cakes, and bread, experimenting with different flavors
+      and methods to create delicious treats.
+    </p>
+  </li>
+</ul>
+{% endblock %}
