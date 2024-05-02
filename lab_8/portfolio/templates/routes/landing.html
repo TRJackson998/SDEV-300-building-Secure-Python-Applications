@@ -1,0 +1,34 @@
+<!-- landing.html -->
+{% extends "base.html" %} {% block content %}
+<h2>Welcome to my Portfolio!</h2>
+<p>
+  Hello and thank you for visiting! I'm Terrence Jackson, a results-oriented
+  software developer with a passion for automating processes, resolving complex
+  issues, and collaborating with cross-functional teams to deliver high-quality
+  solutions. With a strong attention to detail and a commitment to continuous
+  improvement, I strive to uncover patterns, detect anomalies, and make
+  data-driven decisions that drive success.
+</p>
+<p>
+  Feel free to explore my portfolio to learn more about my projects, skills, and
+  experiences. If you have any questions or would like to connect, don't
+  hesitate to reach out via the contact information provided in
+  <a href="{{ url_for('routes.contact') }}">Contact</a>. Thank you for your
+  interest, and I look forward to connecting with you!
+</p>
+
+<p>Best regards,</p>
+<p>Terrence Jackson</p>
+
+<p>
+  <img
+    src="{{ url_for('static', filename='me.png') }}"
+    alt="Terrence Jackson's headshot"
+  />
+</p>
+
+{% endblock %} {% block footer%}
+<p>&copy; 2024 My Portfolio</p>
+<!-- Add current datetime to footer -->
+<p>{{ current_datetime }}</p>
+{% endblock %}
